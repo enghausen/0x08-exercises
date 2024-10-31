@@ -4,15 +4,17 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "g++",
+      "command": "gcc",
       "args": [
         "-g",
-        "-std=c++11",
-        "src/*.cpp",
+        "src/*.c",
         "-o",
         "${workspaceFolder}/build/${workspaceFolderBasename}.out"
       ],
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "problemMatcher": [
         "$gcc"
       ],
