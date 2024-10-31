@@ -13,7 +13,7 @@ The task is to write a program in C that implements a circular buffer, that can 
   - values should be overwritten according to the first-in-first-out (FIFO) principle (always the oldest value)
 - The content of the array shall be displayed whenever a value is added (printed to the standard output)
 
-Since we're working with argument to `main()`, we'll have to set those in Visual Studio. To set command-line arguments in Visual Studio, right click on the project name, then go to 'Properties'. In the Properties Pane, go to "Debugging", and in this pane is a line for "Command-line arguments." Add the values you would like to use on this line. They will be passed to the program via the `argv` array.
+Since we're working with arguments to `main()`, we'll have to set those in VSCode. To set command-line arguments in VSCode, go to `launch.json` and find `"args"` (line 9) and inspect the values. We've seeded the configuration with some data, but you're welcome to change it. You can also call the program from a terminal as shown below:
 
 ##### Example output
 ```

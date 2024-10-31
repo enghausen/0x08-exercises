@@ -1,15 +1,17 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 void init(int* buf, int buf_size);
 void move(int* buf, int** indexer, int size);
 
+// modify this code to solve the exercise
 int main(int argc, char* argv[]) {
-  printf("Circular buffer\n");
-  int buffer[255]; // what does this mean in terms of the maximum size for our ring buffer?
-  
-  // Read the length of the buffer from argv (hint: remember index 0 is the program name)
 
-  // initialize the buffer with the correct length
+  int buffer[255]; // what does this mean in terms of the maximum size for our ring buffer?
+
+  for(int i = 0; i < argc; i++) {
+    printf("%s\n", argv[i]);
+  }
 
   return 0;
 }
