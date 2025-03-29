@@ -1,17 +1,19 @@
 # Lecture 09 Exercises
 
-## Exercise 0x00 Circular buffer with arrays
-A circular buffer (also known as ring buffers or cyclic buffers) works like a normal list, except that if the number of values exceeds the capacity of the buffer, the oldest value will be overwritten. Circular buffers are widely used in real-world scenarios, like logging, where older entries are overwritten to save disk space, or data streaming, where data is continuously produced and consumed (like when we're watching Netfilx, Twitch or YouTube). 
+# Circular buffer with arrays
+A circular buffer (also known as a ring buffer or cyclic buffer) is similar to a regular list, but with a key difference: when the number of stored values exceeds the buffer’s capacity, the oldest value is overwritten. Circular buffers are commonly used in real-world applications such as:
+- Logging, where older entries are replaced to conserve disk space.
+- Data streaming, where data is continuously produced and consumed (e.g., when streaming on Netflix, Twitch, or YouTube).
 
-The task is to write a program in C that implements a circular buffer, that can contain a number of integer values.
+Write a C program that implements a circular buffer capable of storing integer values.
 
-### Requirements
-- The program shall accept an arbitrary (between 0 and 255) number of arguments where
-  - the value at index 1 specifies the size of the buffer (how many values it can hold)
-  - any subsequent arguments will be stored in the buffer (initialization)
-- If maximum capacity is reached
-  - values should be overwritten according to the first-in-first-out (FIFO) principle (always the oldest value)
-- The content of the array shall be displayed whenever a value is added (printed to the standard output)
+**Requirements**
+- The program should accept an arbitrary number of arguments (between 0 and 255), where:
+  - The first argument (index 1) specifies the buffer size (the maximum number of values it can hold).
+  - Any subsequent arguments initialize the buffer with values.
+- If the buffer reaches its maximum capacity:
+  - New values should overwrite the oldest ones, following the first-in, first-out (FIFO) principle.
+- Whenever a value is added, the program should print the current buffer contents to standard output.
 
 Since we're working with arguments to `main()`, we'll have to set those in VSCode. To set command-line arguments in VSCode, go to `launch.json` and find `"args"` (line 9) and inspect the values. We've seeded the configuration with some data, but you're welcome to change it. You can also call the program from a terminal as shown below:
 
