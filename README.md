@@ -15,9 +15,18 @@ Write a C program that implements a circular buffer capable of storing integer v
   - New values should overwrite the oldest ones, following the first-in, first-out (FIFO) principle.
 - Whenever a value is added, the program should print the current buffer contents to standard output.
 
-Since we're working with arguments to `main()`, we'll have to set those in VSCode. To set command-line arguments in VSCode, go to `launch.json` and find `"args"` (line 9) and inspect the values. We've seeded the configuration with some data, but you're welcome to change it. You can also call the program from a terminal as shown below:
+_**Hint** The first arguments is always the executable name_
+_**Hint** It is probably not a good idea to use the subscript operator (`[]`) when reading and writing values in the buffer_
 
-##### Example output
+**Passing command-line arguments to the debugger**
+Since the program takes command-line arguments, you’ll need to configure them in VSCode:
+1. Open `launch.json`.
+2. Locate the `args` field.
+3. Modify the values as needed (a sample configuration is provided, but feel free to change it).
+
+You can also call the program from a terminal as shown below:
+
+**Example output**
 ```
 $ ./main-array.o 4 1 2 3 4 5 6
 1 0 0 0
@@ -28,8 +37,8 @@ $ ./main-array.o 4 1 2 3 4 5 6
 5 6 3 4
 ```
 
-##### Handout
-It might be a good idea to initialize the array to make it easier read the output, here is a function that does that
+**Handout**
+It's a good idea to initialize the array to make it easier debug. Here is a function that does that
 ```c
 void init(int* array, int count) {
   for(int i = 0; i < count; i++) {
@@ -38,14 +47,10 @@ void init(int* array, int count) {
 }
 ```
 
-_**Hint** The first arguments is always the executable name_
-
-_**Hint** It is probably not a good idea to use the subscript operator (`[]`) when reading and writing values in the buffer_
-
-## Exercise 0x01 – Add new values
+## Add new values
 Extend the program from [Exercise 0x00](#exercise-0x00-circular-buffer-with-arrays) to prompt the user to enter new integers in an infinite loop.
 
-##### Example output
+**Example output**
 ```
 $ ./main-array.o 8 1 2 3 4 5 6 7     
 1 0 0 0 0 0 0 0 
@@ -64,4 +69,4 @@ Enter next value: 10
 Enter next value: 
 ```
 
-_**Hint** Don't bother thinking about non-integer inputs, we'll assume we have nice users who will always input integers!_
+_**Hint** Don't worry about non-integer inputs—we'll assume our users are nice and will always enter integers!_
