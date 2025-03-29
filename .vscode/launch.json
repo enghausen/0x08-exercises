@@ -5,7 +5,7 @@
       "name": "Build and Run",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/${workspaceFolderBasename}.out",
+      "program": "${workspaceFolder}/build/circular_buffer",
       "args": ["4", "2", "4", "8", "16"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
